@@ -9,8 +9,10 @@ fun main() {
     val internSalary = 20000
     val totalInternsSalary = numberOfInterns * internSalary
 
+    val employeesAndInterns = numberOfEmployees + numberOfInterns
+
     val totalCost = totalEmployeesSalary + totalInternsSalary
-    val averageEmployeeSalary = totalCost / numberOfEmployees
+    val averageEmployeeSalary = totalCost / employeesAndInterns
 
     println(totalEmployeesSalary)
     println(totalCost)
