@@ -1,7 +1,7 @@
 package org.example.lesson_2
 
+const val NUMBER_OF_MINUTES = 60
 fun main() {
-    val NUMBER_OF_MINUTES = 60
     val departureTime = 579
     val travelTime = 457
     val arrivalTime = departureTime + travelTime
