@@ -1,5 +1,13 @@
 package org.example.lesson_2
 
 fun main() {
-    println((3.0 + 4.0 + 3.0 + 5.0) / 4)
+    val numberOfStudents = 4
+    val firstStudentGrade = 3.0
+    val secondStudentGrade = 4.0
+    val thirdStudentGrade = 3.0
+    val forthStudentGrade = 5.0
+
+    val avarageGrade = (firstStudentGrade + secondStudentGrade + thirdStudentGrade + forthStudentGrade) / numberOfStudents
+
+    println(avarageGrade)
 }
