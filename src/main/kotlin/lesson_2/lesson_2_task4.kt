@@ -1,11 +1,12 @@
 package org.example.lesson_2
 
+const val PERCENT = 100
 fun main() {
     val cristalOre = 7
     val ironOre = 11
 
-    val buffMultiplier = 0.2
+    val buffMultiplier = 20
 
-    println((cristalOre * buffMultiplier).toInt())
-    println((ironOre * buffMultiplier).toInt())
+    println("Количество бонусной кристаллической руды: ${(cristalOre * buffMultiplier / PERCENT).toInt()}")
+    println("Количество бонусной железной руды: ${(ironOre * buffMultiplier / PERCENT).toInt()}")
 }
