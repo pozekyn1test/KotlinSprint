@@ -1,10 +1,9 @@
 package org.example.lesson_3
 
 fun main() {
-    var userName = "Никита"
-    var greeting: String
+    val userName = "Никита"
+    var greeting = "Добрый день, $userName!"
 
-    greeting = "Добрый день, $userName!"
     println(greeting)
 
     greeting = "Добрый вечер, $userName!"
