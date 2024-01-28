@@ -1,21 +1,21 @@
 package org.example.lesson_4
 
 fun main() {
-    val scan = java.util.Scanner(System.`in`)
-
     println("Корабль поврежден?(true/false):")
-    val isDamaged = scan.nextBoolean()
+    val isDamaged = readln().toBoolean()
 
     println("Введите количество команды:")
-    val crew = scan.nextInt()
+    val crew = readln().toInt()
 
     println("Введите количество припасов:")
-    val cratesOfSupplies = scan.nextInt()
+    val cratesOfSupplies = readln().toInt()
 
     println("Погода благоприятная?(true/false):")
-    val isGoodWeather = scan.nextBoolean()
+    val isGoodWeather = readln().toBoolean()
 
-    println("Корабль мможет приступить к плаванию: " +
-            "${(!isDamaged && crew in 50..70 && cratesOfSupplies > 50)
-                    || (isDamaged && crew == 70 && cratesOfSupplies >= 50 && isGoodWeather)}")
+    when {
+        (!isDamaged) && (crew in 50..70) && (cratesOfSupplies > 50) -> println("Корабль может приступить к плаванию")
+        (isDamaged) && (crew == 70) && (cratesOfSupplies >= 50) && (isGoodWeather) -> println("Корабль может приступить к плаванию")
+        else -> println("Корабль не может приступить к плаванию")
+    }
 }
