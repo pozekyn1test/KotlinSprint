@@ -10,11 +10,11 @@ fun main() {
     println("Введите второе число:")
     val userSecondNumber = readln().toInt()
 
-    if (userFirstNumber == firstNumber && userSecondNumber == secondNumber) println("Поздравляем! Вы выиграли главный приз!")
-    else if (userFirstNumber == secondNumber && userSecondNumber == firstNumber) println("Поздравляем! Вы выиграли главный приз!")
-    else if (userFirstNumber != firstNumber && userSecondNumber == secondNumber) println("Вы выиграли утешительный приз!")
-    else if (userFirstNumber != secondNumber && userSecondNumber == firstNumber) println("Вы выиграли утешительный приз!")
-    else if (userSecondNumber != firstNumber && userFirstNumber == secondNumber) println("Вы выиграли утешительный приз!")
-    else if (userSecondNumber != secondNumber && userFirstNumber == firstNumber) println("Вы выиграли утешительный приз!")
+    if (((userFirstNumber == firstNumber) && (userSecondNumber == secondNumber)) ||
+        ((userFirstNumber == secondNumber) && (userSecondNumber == firstNumber))) println("Поздравляем! Вы выиграли главный приз!")
+    else if (((userFirstNumber != firstNumber) && (userSecondNumber == secondNumber)) ||
+        ((userFirstNumber != secondNumber) && (userSecondNumber == firstNumber)) ||
+            ((userSecondNumber != firstNumber) && (userFirstNumber == secondNumber)) ||
+            ((userSecondNumber != secondNumber) && (userFirstNumber == firstNumber))) println("Вы выиграли утешительный приз!")
     else println("Неудача!")
 }
